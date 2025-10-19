@@ -14,23 +14,20 @@
         darkMode: 'media',
       }
     </script>
-    <!-- Remove integrity attributes to fix loading issues -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!-- Remove importmap - these packages should be bundled by Vite -->
-    <!-- The importmap is causing issues and these should be npm packages instead -->
-    
-    <style>
-      body {
-        font-family: 'Open Sans', sans-serif;
-      }
-    </style>
-  </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoVBL5gI9kLmbG0CsdTXXLVRvdAwww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVr/me8z+IO5+mKBqbCftHsp4_qgYtxaVbMvLCVrGBi82iuUoKm_oIHsZJsQ+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="importmap">
+
+</script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+</head>
   <body class="bg-slate-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200">
     <div id="root"></div>
-    <!-- Change /index.tsx to /src/main.tsx which is the standard Vite entry point -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
