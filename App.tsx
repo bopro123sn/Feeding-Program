@@ -71,9 +71,9 @@ const App: React.FC = () => {
     }
     
     try {
-        const apiKey = import.meta.env.VITE_APIKEYS;
-        const ai = new GoogleGenAI({apiKey: apiKey});
-        const prompt = `
+          const apiKey = import.meta.env.VITE_APIKEYS;
+          const ai = new GoogleGenAI({apiKey: apiKey});
+          const prompt = `
 Bạn là một chuyên gia phân tích trang trại chăn nuôi heo, đưa ra những nhận định ngắn gọn, sâu sắc và dễ hiểu bằng tiếng Việt cho người nông dân.
 Dựa vào các dữ liệu phân tích hiệu quả chăn nuôi dưới đây, hãy đưa ra một đoạn nhận xét và khuyến nghị ngắn gọn (khoảng 2-4 câu) bằng tiếng Việt. Tập trung vào các điểm mạnh (ví dụ: FCR tốt, tăng trọng cao) và các rủi ro tiềm ẩn (ví dụ: lợi nhuận nhạy cảm với giá bán, chi phí thức ăn cao).
 
