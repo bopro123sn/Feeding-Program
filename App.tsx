@@ -63,8 +63,8 @@ const App: React.FC = () => {
     setIsInsightsLoading(true);
     setInsights(null);
     setInsightsError(null);
-
-    if (!process.env.API_KEY) {
+    const apiKey = import.meta.env.VITE_API_KEY;
+    if (!apiKey) {
         setInsightsError("API key is not configured. AI insights are unavailable.");
         setIsInsightsLoading(false);
         return;
