@@ -37,9 +37,6 @@ const App: React.FC = () => {
   const [selectedProgram, setSelectedProgram] = useState<string>('custom');
 
 
-  // API
-  const apiKey = import.meta.env.VITE_API_KEY;
-
   const handleStageChange = (updatedStage: Stage) => {
     setStages(stages.map(s => s.name === updatedStage.name ? updatedStage : s));
     setSelectedProgram('custom');
@@ -63,7 +60,7 @@ const App: React.FC = () => {
     setIsInsightsLoading(true);
     setInsights(null);
     setInsightsError(null);
-    const apiKey = import.meta.env.VITE_API_KEY;
+    const apiKey = import.meta.env.VITE_APIKEYS;
     console.log(apiKey)
     if (!apiKey) {
         setInsightsError("API key is not configured. AI insights are unavailable.");
@@ -72,7 +69,6 @@ const App: React.FC = () => {
     }
     
     try {
-          const apiKey = import.meta.env.VITE_APIKEYS;
           const ai = new GoogleGenAI({apiKey: apiKey});
           const prompt = `
 Bạn là một chuyên gia phân tích trang trại chăn nuôi heo, đưa ra những nhận định ngắn gọn, sâu sắc và dễ hiểu bằng tiếng Việt cho người nông dân.
